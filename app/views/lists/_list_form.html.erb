@@ -1,6 +1,7 @@
 <div class="d-flex m-5">
 <%= simple_form_for (list) do |f| %>
 <%= f.input :name %>
+<%= f.input :photo, as: :file %>
 <%= f.submit class:"btn btn-danger m-2" %>
 <% end %>
 </div>

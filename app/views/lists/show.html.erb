@@ -1,4 +1,4 @@
-<div class="index">
+<div class="show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
   <h1><%= @list.name %></h1>
 </div>
 
@@ -8,7 +8,7 @@
   <% end %>
 
   <%= link_to  list_path(@list), data: {turbo_method: :delete} do %>
-    <button class="btn btn-danger">Delete List</button>
+    <button class="btn btn-danger me-4">Delete List</button>
   <% end %>
 </div>
 <div class="row">
@@ -16,8 +16,8 @@
   <div class="col-4 m-3">
     <div class="cards-show">
       <div class="d-flex flex-column m-2">
-        <h2 class="m-3"><%= b.title %></h2>
-        <p>Overview : <%= b.overview %></p>
+        <h3 class="m-3"><%= b.title %></h3>
+        <p>Overview : <%= b.overview.split.take(10).join(" ") %>...</p>
       </div>
       <%= image_tag b.poster_url, class:"poster" %>
     </div>

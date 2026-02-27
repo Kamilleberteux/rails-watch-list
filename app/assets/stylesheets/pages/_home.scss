@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   color: white;
-  height: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +13,12 @@
 .cards {
   height: 100px;
   background-color: white;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
   box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.6);
-  color: black;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: 0 2px 2px black;
   border-radius: 10px;
   display: flex;
   justify-content: center;
