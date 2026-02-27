@@ -1,0 +1,26 @@
+<div class="index">
+  <h1><%= @list.name %></h1>
+</div>
+
+<div class="show-btn">
+  <%= link_to  new_list_bookmark_path(@list) do %>
+    <button class="btn btn-danger">Add a movie</button>
+  <% end %>
+
+  <%= link_to  list_path(@list), data: {turbo_method: :delete} do %>
+    <button class="btn btn-danger">Delete List</button>
+  <% end %>
+</div>
+<div class="row">
+    <% @list.movies.each do |b| %>
+  <div class="col-4 m-3">
+    <div class="cards-show">
+      <div class="d-flex flex-column m-2">
+        <h2 class="m-3"><%= b.title %></h2>
+        <p>Overview : <%= b.overview %></p>
+      </div>
+      <%= image_tag b.poster_url, class:"poster" %>
+    </div>
+  </div>
+    <% end %>
+</div>

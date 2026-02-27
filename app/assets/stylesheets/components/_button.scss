@@ -1,0 +1,17 @@
+button{
+    margin: 10px;
+    color: white;
+    &:hover{
+      background-color: rgb(32, 2, 2);
+      transition: 2s;
+    }
+  }
+
+.button{
+  margin: 10px;
+  color: white;
+  &:hover{
+    background-color: rgb(32, 2, 2);
+    transition: 2s;
+    }
+}
